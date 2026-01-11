@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NetScope Analytics</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="ss.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-container">
+    <h1 class="logo">NetScope</h1>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#hero">Overview</a></li>
+        <li><a href="#about">Mission</a></li>
+        <li><a href="#showcase">Features</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  
+  <section id="hero">
+    <h2>Analyze Your Digital Footprint</h2>
+    <p>Get immediate insights into your connection. We map your public IP details, provider info, and approximate location in real-time.</p>
+    <button id="showInfoBtn" class="btn">Reveal My Data</button>
+  </section>
+
+  <section id="dashboard" class="hidden">
+    <div class="card">
+      <h2>Connection Details</h2>
+
+      <div id="loading" class="loading">Fetching network data...</div>
+      <div id="map"></div>
+      <div id="info" style="display:none;">
+        <div class="info-row">
+          <span class="label">Public IP</span>
+          <span class="value" id="ip"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Hostname</span>
+          <span class="value" id="hostname"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">City</span>
+          <span class="value" id="city"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Region</span>
+          <span class="value" id="region"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Country</span>
+          <span class="value" id="country"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Coordinates</span>
+          <span class="value" id="loc"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">ISP / Org</span>
+          <span class="value" id="org"></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Timezone</span>
+          <span class="value" id="timezone"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about">
+    <h2>Why NetScope?</h2>
+    <p align="center">Understanding your network status shouldn't require a degree in computer science. We created this tool to give you a clear, visual snapshot of how the internet sees you. Whether you are troubleshooting connectivity, verifying your VPN location, or just curious, we provide the data you need in a layout that just works.</p>
+  </section>
+
+  <section id="showcase">
+    <div class="showcase-card">
+      <h3>Instant Lookup</h3>
+      <p>Bypass the command line. We query global geolocation APIs to pull your public network identity in milliseconds.</p>
+    </div>
+    <div class="showcase-card">
+      <h3>Visual Geolocation</h3>
+      <p>Context matters. We render your approximate coordinates on an interactive map to help you visualize server regions and latency zones.</p>
+    </div>
+    <div class="showcase-card">
+      <h3>Universal Access</h3>
+      <p>Built for speed and compatibility, our interface adapts seamlessly across your workstation, tablet, and mobile devices.</p>
+    </div>
+  </section>
+
+
+
+  <footer>
+    &copy; 2026 NetScope Analytics. Built for the curious.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script src="ww.js"></script>
+</body>
+</html>
